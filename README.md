@@ -1,4 +1,4 @@
-xst.extlib
+xsp.extlib
 ==========
 
 OPENNTF
