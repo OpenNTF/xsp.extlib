@@ -29,8 +29,9 @@ public class AbstractBean implements Serializable {
 
 	public static AbstractBean getCurrentInstance(String suffix) {
 		AbstractBean result = null;
-		result = (AbstractBean) LibraryUtils.resolveVariable(FacesContextEx.getCurrentInstance(), OpenNTFLibrary.LIBRARY_BEAN_PREFIX
-				+ suffix);
+		result = (AbstractBean) LibraryUtils.resolveVariable(FacesContextEx.getCurrentInstance(),
+				OpenNTFLibrary.LIBRARY_BEAN_PREFIX
+						+ suffix);
 		return result;
 	}
 

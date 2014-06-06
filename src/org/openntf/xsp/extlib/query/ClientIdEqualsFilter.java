@@ -11,7 +11,7 @@ public class ClientIdEqualsFilter extends QueryFilter {
 	static {
 		_logger = Logger.getLogger(ClientIdEqualsFilter.class.getName());
 	}
-	
+
 	public ClientIdEqualsFilter(String propertyName, Object content) {
 		super(propertyName, content);
 	}
@@ -19,8 +19,8 @@ public class ClientIdEqualsFilter extends QueryFilter {
 	@Override
 	public boolean matches(UIComponent component, FacesContext context) {
 		String clientId = component.getClientId(context);
-		//_logger.log(Level.FINEST, "Comparing component client id " + clientId + " to " + getContent());
-		if(clientId == null || getContent() == null) {
+		// _logger.log(Level.FINEST, "Comparing component client id " + clientId + " to " + getContent());
+		if (clientId == null || getContent() == null) {
 			return false;
 		} else {
 			return component.getClientId(context).equalsIgnoreCase(getContent().toString());

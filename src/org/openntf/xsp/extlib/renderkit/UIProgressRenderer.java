@@ -20,46 +20,42 @@ public class UIProgressRenderer extends Renderer {
 			Resources.addEncodeResource(context, Resources.uiProgress);
 			UIProgress tag = (UIProgress) component;
 			super.encodeBegin(context, component);
-			
+
 			ResponseWriter writer = context.getResponseWriter();
-			
-			
-			
+
 			String progressClass = "";
 			progressClass = "progress";
-			
+
 			// Add in the color variation
-			if (tag.getBarType() == "Info"){
+			if (tag.getBarType() == "Info") {
 				progressClass = progressClass + " progress-info";
 			}
-			if (tag.getBarType() == "Success"){
+			if (tag.getBarType() == "Success") {
 				progressClass = progressClass + " progress-success";
 			}
-			if (tag.getBarType() == "Warning"){
+			if (tag.getBarType() == "Warning") {
 				progressClass = progressClass + " progress-warning";
 			}
-			if (tag.getBarType() == "Danger"){
+			if (tag.getBarType() == "Danger") {
 				progressClass = progressClass + " progress-danger";
 			}
-			
+
 			// Add in the special styles
-			if (tag.getBarStyle() == "Striped"){
+			if (tag.getBarStyle() == "Striped") {
 				progressClass = progressClass + " progress-striped";
 			}
-			if (tag.getBarStyle() == "Active"){
+			if (tag.getBarStyle() == "Active") {
 				progressClass = progressClass + " progress-striped active";
 			}
-			
+
 			writer.startElement("div", component);
 			writer.writeAttribute("class", progressClass, null);
-			
+
 			writer.startElement("div", component);
 			writer.writeAttribute("class", "bar", null);
-			writer.writeAttribute("style", "width:"+ tag.getBarWidth(), null);
+			writer.writeAttribute("style", "width:" + tag.getBarWidth(), null);
 			writer.endElement("div");
-			
-			
-		
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

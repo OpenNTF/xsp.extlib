@@ -28,7 +28,8 @@ public class NavigationHandler extends javax.faces.application.NavigationHandler
 	private final javax.faces.application.NavigationHandler _delegate;
 	private final static boolean _debug = Activator._debug;
 
-	public NavigationHandler(javax.faces.application.NavigationHandler handler) throws FacesException, ClassNotFoundException,
+	public NavigationHandler(javax.faces.application.NavigationHandler handler) throws FacesException,
+			ClassNotFoundException,
 			InstantiationException, IllegalAccessException {
 		if (handler == null) {
 			javax.faces.application.NavigationHandler priorHandler = ((javax.faces.application.NavigationHandler) Delegation
@@ -41,7 +42,8 @@ public class NavigationHandler extends javax.faces.application.NavigationHandler
 			_delegate = handler;
 		}
 		if (_debug) {
-			System.out.println(getClass().getName() + " created using " + (_delegate != null ? _delegate.getClass().getName() : "null"));
+			System.out.println(getClass().getName() + " created using "
+					+ (_delegate != null ? _delegate.getClass().getName() : "null"));
 		}
 	}
 

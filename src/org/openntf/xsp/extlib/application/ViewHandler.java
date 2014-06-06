@@ -32,7 +32,8 @@ public class ViewHandler extends com.ibm.xsp.application.ViewHandlerExImpl {
 		super(paramViewHandler);
 		_handler = paramViewHandler;
 		if (_debug) {
-			System.out.println(getClass().getName() + " created using " + (_handler != null ? _handler.getClass().getName() : "null"));
+			System.out.println(getClass().getName() + " created using "
+					+ (_handler != null ? _handler.getClass().getName() : "null"));
 		}
 	}
 
@@ -67,7 +68,8 @@ public class ViewHandler extends com.ibm.xsp.application.ViewHandlerExImpl {
 	}
 
 	@Override
-	public void renderView(FacesContext paramFacesContext, UIViewRoot paramUIViewRoot) throws IOException, FacesException {
+	public void renderView(FacesContext paramFacesContext, UIViewRoot paramUIViewRoot) throws IOException,
+			FacesException {
 		// your code goes here
 		super.renderView(paramFacesContext, paramUIViewRoot);
 	}

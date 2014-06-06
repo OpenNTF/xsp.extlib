@@ -32,7 +32,8 @@ public class ServletFactory implements IServletFactory {
 
 	public ServletFactory(String pathInfo, String servletClass, String servletName) {
 		if (_debug) {
-			System.out.println(getClass().getName() + " created with pathInfo " + pathInfo + ", servletClass: " + servletClass
+			System.out.println(getClass().getName() + " created with pathInfo " + pathInfo + ", servletClass: "
+					+ servletClass
 					+ ", servletName: " + servletName);
 		}
 		pathInfo = PathUtil.concatPath("/xsp", pathInfo, '/'); // $NON-NLS-1$

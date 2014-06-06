@@ -67,7 +67,8 @@ public class OpenNTFFacesContextFactory extends FacesContextFactory {
 	}
 
 	@Override
-	public FacesContext getFacesContext(Object context, Object request, Object response, Lifecycle lifecycle) throws FacesException {
+	public FacesContext getFacesContext(Object context, Object request, Object response, Lifecycle lifecycle)
+			throws FacesException {
 		FacesContext ctx = _delegate.getFacesContext(context, request, response, lifecycle);
 		OpenNTFFacesContext localContext = new OpenNTFFacesContext(ctx);
 		attachListener(localContext);

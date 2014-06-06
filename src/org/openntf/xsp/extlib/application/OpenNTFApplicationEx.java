@@ -41,7 +41,8 @@ public class OpenNTFApplicationEx extends DesignerApplicationEx {
 		super(paramApplication);
 		initListeners();
 		if (_debug) {
-			System.out.println(getClass().getName() + " created from delegate application " + paramApplication.getClass().getName());
+			System.out.println(getClass().getName() + " created from delegate application "
+					+ paramApplication.getClass().getName());
 			// System.out.println("PropertyResolver: " + getPropertyResolver().getClass().getName());
 			// System.out.println("VariableResolver: " + getVariableResolver().getClass().getName());
 			// System.out.println("NavigationHandler: " + getNavigationHandler().getClass().getName());

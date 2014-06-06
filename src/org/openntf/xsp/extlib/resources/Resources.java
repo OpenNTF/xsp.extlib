@@ -30,17 +30,21 @@ public class Resources {
 
 	public static final StyleSheetResource openntfStyleSheet1 = new StyleSheetResource(ResourceProvider.RESOURCE_PATH
 			+ "styles/openntfstyle1.css");
-	public static final StyleSheetResource uiRibbonStyle = new StyleSheetResource(ResourceProvider.RESOURCE_PATH + "styles/ribbon.css");
-	public static final StyleSheetResource uiProgress = new StyleSheetResource(ResourceProvider.RESOURCE_PATH + "styles/progress.css");
-	public static final StyleSheetResource uiIOSBadge = new StyleSheetResource(ResourceProvider.RESOURCE_PATH + "styles/iosb.css");
-	public static final StyleSheetResource czaruiBadges = new StyleSheetResource(ResourceProvider.RESOURCE_PATH + "styles/badges.css");
-	
-	public static final ScriptResource openntfClientLibrary1 = new ScriptResource(ResourceProvider.RESOURCE_PATH + "js/openntfLibrary1.js",
+	public static final StyleSheetResource uiRibbonStyle = new StyleSheetResource(ResourceProvider.RESOURCE_PATH
+			+ "styles/ribbon.css");
+	public static final StyleSheetResource uiProgress = new StyleSheetResource(ResourceProvider.RESOURCE_PATH
+			+ "styles/progress.css");
+	public static final StyleSheetResource uiIOSBadge = new StyleSheetResource(ResourceProvider.RESOURCE_PATH
+			+ "styles/iosb.css");
+	public static final StyleSheetResource czaruiBadges = new StyleSheetResource(ResourceProvider.RESOURCE_PATH
+			+ "styles/badges.css");
+
+	public static final ScriptResource openntfClientLibrary = new ScriptResource(ResourceProvider.RESOURCE_PATH
+			+ "js/openNTF.js",
 			true);
-	public static final ScriptResource openntfClientLibrary2 = new ScriptResource(ResourceProvider.RESOURCE_PATH + "js/openntfLibrary2.js",
-			true);
-	public static final Resource[] openntfResourceCollection = { openntfDojoModule1, openntfDojoModule2, openntfStyleSheet1,
-			openntfClientLibrary1, openntfClientLibrary2 };
+	public static final Resource[] openntfResourceCollection = { openntfDojoModule1, openntfDojoModule2,
+			openntfStyleSheet1,
+			openntfClientLibrary };
 
 	public static void addAllEncodeResources() {
 
@@ -66,7 +70,8 @@ public class Resources {
 
 	@SuppressWarnings("unchecked")
 	public static void addEncodeResource(UIViewRootEx rootEx, Resource resource) {
-		IdentityHashMap<Resource, Boolean> m = (IdentityHashMap<Resource, Boolean>) rootEx.getEncodeProperty("genesis.EncodeResource");
+		IdentityHashMap<Resource, Boolean> m = (IdentityHashMap<Resource, Boolean>) rootEx
+				.getEncodeProperty("genesis.EncodeResource");
 		if (m == null) {
 			m = new IdentityHashMap<Resource, Boolean>();
 		} else {

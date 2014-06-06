@@ -34,7 +34,8 @@ public class OpenNTFFacesContext extends DominoFacesContext {
 	public OpenNTFFacesContext(FacesContext paramFacesContext) {
 		super(paramFacesContext);
 		if (_debug) {
-			System.out.println(getClass().getName() + " created from delegate of " + paramFacesContext.getClass().getName());
+			System.out.println(getClass().getName() + " created from delegate of "
+					+ paramFacesContext.getClass().getName());
 			System.out.println("RenderKit: " + getRenderKit().getClass().getName());
 		}
 	}

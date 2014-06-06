@@ -26,12 +26,12 @@ public class UIRibbonRenderer extends Renderer {
 
 			writer.startElement("div", component);
 			writer.writeAttribute("class", "ribbon-wrapper-inner", null);
-			
+
 			writer.startElement("div", component);
-			writer.writeAttribute("class", "ribbon-" + tag.getRibbonColor(),null);
+			writer.writeAttribute("class", "ribbon-" + tag.getRibbonColor(), null);
 			writer.append(tag.getRibbonText());
 			writer.endElement("div");
-			
+
 			writer.endElement("div");
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -11,7 +11,7 @@ public class EqualsFilter extends QueryFilter {
 	static {
 		_logger = Logger.getLogger(EqualsFilter.class.getName());
 	}
-	
+
 	public EqualsFilter(String propertyName, Object content) {
 		super(propertyName, content);
 	}

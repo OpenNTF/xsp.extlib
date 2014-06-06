@@ -34,10 +34,12 @@ public class ComponentTreeMassage {
 		UIComponent component = domQuery.byId(componentId);
 		if (component != null) {
 			_logger.finer("Found a component that is of type " + component.getClass().getCanonicalName());
-			_logger.finer("Component has an id of " + component.getId() + " and has " + component.getChildren().size() + " children");
+			_logger.finer("Component has an id of " + component.getId() + " and has " + component.getChildren().size()
+					+ " children");
 			Integer compIndex = component.getParent().getChildren().indexOf(component);
 			_logger.finer("component has a parent of " + component.getParent().getId());
-			_logger.finer("component is located at index " + compIndex + " out of " + component.getParent().getChildren().size());
+			_logger.finer("component is located at index " + compIndex + " out of "
+					+ component.getParent().getChildren().size());
 
 			boolean result = component.getParent().getChildren().remove(component);
 			_logger.finer("Result of remove is " + result);
@@ -69,7 +71,8 @@ public class ComponentTreeMassage {
 				_logger.finer("out of loop for " + component.getId() + " processed " + counter + " components");
 				removeComponent(component);
 			} else {
-				_logger.finer("removing childless component " + component.getId() + " whose parent is " + component.getParent().getId());
+				_logger.finer("removing childless component " + component.getId() + " whose parent is "
+						+ component.getParent().getId());
 				component.setRendered(false);
 				removeComponent(component);
 			}
@@ -269,7 +272,8 @@ public class ComponentTreeMassage {
 	}
 
 	@SuppressWarnings("rawtypes")
-	public static void cloneAttribute(UIComponent sourceComponent, UIComponent destinationComponent, String propertyName, Class propertyType) {
+	public static void cloneAttribute(UIComponent sourceComponent, UIComponent destinationComponent,
+			String propertyName, Class propertyType) {
 		_logger.finest("Cloning " + propertyType.getSimpleName() + " attribute " + propertyName + " from "
 				+ sourceComponent.getClass().getSimpleName() + " to " + destinationComponent.getClass().getSimpleName());
 		ValueBinding vb = sourceComponent.getValueBinding(propertyName);
@@ -289,13 +293,15 @@ public class ComponentTreeMassage {
 		}
 	}
 
-	private static void cloneAttributeValue(UIComponent sourceComponent, UIComponent destinationComponent, Method getter, Method setter) {
+	private static void cloneAttributeValue(UIComponent sourceComponent, UIComponent destinationComponent,
+			Method getter, Method setter) {
 		if (getter != null) {
 			_logger.finest("Getter method is " + getter.getName());
 			if (setter != null) {
 				_logger.finest("Setter method is " + setter.getName());
 				try {
-					setter.invoke(destinationComponent, new Object[] { getter.invoke(sourceComponent, (Object[]) null) });
+					setter.invoke(destinationComponent,
+							new Object[] { getter.invoke(sourceComponent, (Object[]) null) });
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

@@ -20,28 +20,28 @@ public class UIStackOverflowBadgeRenderer extends Renderer {
 			Resources.addEncodeResource(context, Resources.czaruiBadges);
 			UIStackOverflowBadge tag = (UIStackOverflowBadge) component;
 			super.encodeBegin(context, component);
-			
+
 			ResponseWriter writer = context.getResponseWriter();
-			
+
 			writer.startElement("div", component);
 			writer.writeAttribute("class", "badge-wrapper", null);
-			
+
 			writer.startElement("a", component);
 			writer.writeAttribute("href", "#", null);
 			writer.writeAttribute("title", "Bronze Badge", null);
-			
-			if (tag.getBadgeType()){
+
+			if (tag.getBadgeType()) {
 				writer.writeAttribute("class", "badge tag", null);
 			} else {
 				writer.writeAttribute("class", "badge", null);
 			}
-			
+
 			writer.startElement("span", component);
 			writer.writeAttribute("class", tag.getBadgeColor(), null);
 			writer.endElement("span");
-			
+
 			writer.append(tag.getBadgeText());
-			
+
 			writer.endElement("a");
 
 		} catch (Exception e) {

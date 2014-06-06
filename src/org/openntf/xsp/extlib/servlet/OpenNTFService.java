@@ -27,7 +27,8 @@ public class OpenNTFService extends HttpService {
 
 	@Override
 	public boolean doService(String paramString1, String paramString2, HttpSessionAdapter paramHttpSessionAdapter,
-			HttpServletRequestAdapter paramHttpServletRequestAdapter, HttpServletResponseAdapter paramHttpServletResponseAdapter)
+			HttpServletRequestAdapter paramHttpServletRequestAdapter,
+			HttpServletResponseAdapter paramHttpServletResponseAdapter)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		return false;

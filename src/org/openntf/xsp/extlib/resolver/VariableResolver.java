@@ -27,10 +27,12 @@ public class VariableResolver extends javax.faces.el.VariableResolver {
 	protected final javax.faces.el.VariableResolver _resolver;
 	private final static boolean _debug = Activator._debug;
 
-	public VariableResolver() throws FacesException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public VariableResolver() throws FacesException, ClassNotFoundException, InstantiationException,
+			IllegalAccessException {
 		this._resolver = ((javax.faces.el.VariableResolver) Delegation.getImplementation("variable-resolver"));
 		if (_debug) {
-			System.out.println(getClass().getName() + " created using " + (_resolver != null ? _resolver.getClass().getName() : "null"));
+			System.out.println(getClass().getName() + " created using "
+					+ (_resolver != null ? _resolver.getClass().getName() : "null"));
 		}
 	}
 

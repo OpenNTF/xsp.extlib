@@ -27,10 +27,12 @@ public class PropertyResolver extends javax.faces.el.PropertyResolver {
 	protected final javax.faces.el.PropertyResolver _resolver;
 	private final static boolean _debug = Activator._debug;
 
-	public PropertyResolver() throws FacesException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public PropertyResolver() throws FacesException, ClassNotFoundException, InstantiationException,
+			IllegalAccessException {
 		this._resolver = ((javax.faces.el.PropertyResolver) Delegation.getImplementation("property-resolver"));
 		if (_debug) {
-			System.out.println(getClass().getName() + " created using " + (_resolver != null ? _resolver.getClass().getName() : "null"));
+			System.out.println(getClass().getName() + " created using "
+					+ (_resolver != null ? _resolver.getClass().getName() : "null"));
 		}
 	}
 
@@ -42,7 +44,8 @@ public class PropertyResolver extends javax.faces.el.PropertyResolver {
 	}
 
 	@Override
-	public Object getValue(Object paramObject1, Object paramObject2) throws EvaluationException, PropertyNotFoundException {
+	public Object getValue(Object paramObject1, Object paramObject2) throws EvaluationException,
+			PropertyNotFoundException {
 		// your code goes here
 		return _resolver.getValue(paramObject1, paramObject2);
 	}
@@ -61,13 +64,15 @@ public class PropertyResolver extends javax.faces.el.PropertyResolver {
 	}
 
 	@Override
-	public void setValue(Object paramObject1, int paramInt, Object paramObject2) throws EvaluationException, PropertyNotFoundException {
+	public void setValue(Object paramObject1, int paramInt, Object paramObject2) throws EvaluationException,
+			PropertyNotFoundException {
 		// your code goes here
 		_resolver.setValue(paramObject1, paramInt, paramObject2);
 	}
 
 	@Override
-	public boolean isReadOnly(Object paramObject1, Object paramObject2) throws EvaluationException, PropertyNotFoundException {
+	public boolean isReadOnly(Object paramObject1, Object paramObject2) throws EvaluationException,
+			PropertyNotFoundException {
 		// your code goes here
 		return _resolver.isReadOnly(paramObject1, paramObject2);
 	}
@@ -80,7 +85,8 @@ public class PropertyResolver extends javax.faces.el.PropertyResolver {
 
 	@SuppressWarnings("rawtypes")
 	@Override
-	public Class getType(Object paramObject1, Object paramObject2) throws EvaluationException, PropertyNotFoundException {
+	public Class getType(Object paramObject1, Object paramObject2) throws EvaluationException,
+			PropertyNotFoundException {
 		// your code goes here
 		return _resolver.getType(paramObject1, paramObject2);
 	}

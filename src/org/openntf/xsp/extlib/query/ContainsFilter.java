@@ -11,7 +11,7 @@ public class ContainsFilter extends QueryFilter {
 	static {
 		_logger = Logger.getLogger(ContainsFilter.class.getName());
 	}
-	
+
 	public ContainsFilter(String propertyName, Object content) {
 		super(propertyName, content);
 	}

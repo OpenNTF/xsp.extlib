@@ -35,14 +35,16 @@ public class ContextListener extends AbstractListener implements FacesContextLis
 	}
 
 	public void beforeContextReleased(FacesContext arg0) {
-		// this method is guaranteed to be called when request processing is complete, no matter what phase the request was in
+		// this method is guaranteed to be called when request processing is complete, no matter what phase the request
+		// was in
 		// it is your last chance to access any Domino objects before they will be recycled.
 		_debugOut("beforeContextReleased triggered");
 		// your code goes here
 	}
 
 	public void beforeRenderingPhase(FacesContext arg0) {
-		// this method is called prior to rendering, even if the rendering was jumped to from some other phase of the JSF lifecycle
+		// this method is called prior to rendering, even if the rendering was jumped to from some other phase of the
+		// JSF lifecycle
 		_debugOut("beforeRenderingPhase triggered");
 		// your code goes here
 	}

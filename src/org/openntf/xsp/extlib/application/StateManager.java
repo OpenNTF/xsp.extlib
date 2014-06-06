@@ -34,7 +34,8 @@ public class StateManager extends StateManagerImpl {
 		super(paramStateManager);
 		_delegate = paramStateManager;
 		if (_debug) {
-			System.out.println(getClass().getName() + " created using " + (_delegate != null ? _delegate.getClass().getName() : "null"));
+			System.out.println(getClass().getName() + " created using "
+					+ (_delegate != null ? _delegate.getClass().getName() : "null"));
 		}
 	}
 
@@ -49,7 +50,8 @@ public class StateManager extends StateManagerImpl {
 	}
 
 	@Override
-	public void writeState(FacesContext paramFacesContext, StateManager.SerializedView paramSerializedView) throws IOException {
+	public void writeState(FacesContext paramFacesContext, StateManager.SerializedView paramSerializedView)
+			throws IOException {
 		// your code goes here
 		super.writeState(paramFacesContext, paramSerializedView);
 	}

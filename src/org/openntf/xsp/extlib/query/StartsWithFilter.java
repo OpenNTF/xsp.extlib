@@ -11,7 +11,7 @@ public class StartsWithFilter extends QueryFilter {
 	static {
 		_logger = Logger.getLogger(StartsWithFilter.class.getName());
 	}
-	
+
 	public StartsWithFilter(String propertyName, String content) {
 		super(propertyName, content);
 	}

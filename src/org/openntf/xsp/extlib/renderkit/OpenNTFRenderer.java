@@ -31,7 +31,8 @@ public class OpenNTFRenderer extends Renderer {
 
 	@Override
 	public void encodeBegin(FacesContext context, UIComponent component) throws IOException {
-		Resources.addEncodeResource(context, Resources.openntfStyleSheet1); // not required, just an example of including a resource
+		Resources.addEncodeResource(context, Resources.openntfStyleSheet1); // not required, just an example of
+																			// including a resource
 		super.encodeBegin(context, component);
 	}
 
