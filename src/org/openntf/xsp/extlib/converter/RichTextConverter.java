@@ -17,18 +17,12 @@ import com.ibm.xsp.model.domino.wrapped.DominoRichTextItem;
 
 public class RichTextConverter implements Converter {
 
-	private static final Logger logger_ = Logger.getLogger(RichTextConverter.class.getName());
-
 	public Object getAsObject(FacesContext context, UIComponent component, String valueStr) {
-		// TODO Auto-generated method stub
-		logger_.log(Level.FINER, "getAsObject returning " + valueStr);
 		return valueStr;
 	}
 
 	public String getAsString(FacesContext context, UIComponent component, Object valueObj) {
-		// TODO Auto-generated method stub
 		String result = null;
-		logger_.log(Level.FINER, "getAsString valueObj is a " + valueObj.getClass().getName());
 		String[] fontParams = { "color", "family" };
 		String[] tdParams = { "width" };
 		String[] tableParams = { "border" };
@@ -55,7 +49,6 @@ public class RichTextConverter implements Converter {
 			tempValue = DataScrubber.removeTableParameter(tempValue, tableParams);
 			result = tempValue;
 		}
-		logger_.log(Level.FINER, "getAsString returning" + result);
 		return result;
 	}
 
